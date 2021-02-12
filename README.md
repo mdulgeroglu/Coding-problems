@@ -1,2 +1,2 @@
-# Java-problems
- simple java problems
+# Coding-problems
+ simple coding problems
