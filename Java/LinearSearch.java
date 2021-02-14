@@ -7,10 +7,10 @@ public class LinearSearch {
    public static void main(String args[]) {
       int lookup = 33;
       int[] lookuplist = {11, 22, 12, 23, 2};
-      System.out.println(LinSearch(lookup, lookuplist));
+      System.out.println(linSearch(lookup, lookuplist));
    }
    
-   static int LinSearch(int n, int[] list) {
+   static int linSearch(int n, int[] list) {
       int result = -1;
       for (int i=0; i< list.length; i++) {
          if (n == list[i]) {
