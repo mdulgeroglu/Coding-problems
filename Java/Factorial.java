@@ -3,17 +3,17 @@
 
 public class Factorial {
 
-public static void main(String args[]) {
-    System.out.println(factorialCalc(10));
-}
-
-static int factorialCalc(int n) {
-    int sum = 1;
-    for (int i=1; i<=n; i++) {
-        sum *= i;
+    public static void main(String args[]) {
+        System.out.println(factorialCalc(10));
     }
-    return sum;
-
-}
+    
+    static int factorialCalc(int n) {
+        int sum = 1;
+        for (int i=1; i<=n; i++) {
+            sum *= i;
+        }
+        return sum;
+        
+    }
 
 }
