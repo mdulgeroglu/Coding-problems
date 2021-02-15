@@ -1,6 +1,6 @@
 public class RaceHorse extends Horse {
     // additional attributes for RaceHorse
-    private int birthYear;
+    private int races;
 
     // additional methods for RaceHorse
     public int getRaces() {
