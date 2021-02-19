@@ -44,9 +44,18 @@ BEGIN
 END;
 
 
+/*
+4. Using the COUNTRIES table, write a cursor that returns countries with a highest_elevation greater
+than 8,000 m. For each country, display the country_name, highest_elevation, and climate. Use a
+cursor FOR loop, declaring the cursor using a subquery in the FOR…LOOP statement.
+*/
 
-
-
+BEGIN
+    FOR countries_rec IN (
+        SELECT country_name, highest_elevation, climate FROM countries WHERE highest_elevation > 8000) LOOP
+        DBMS_OUTPUT.PUT_LINE ('Country: ' || RPAD(countries_rec.country_name, 28) || ' | ' || 'Highest Elevation: '|| RPAD(countries_rec.highest_elevation, 4) || ' | ' || 'Climate: '|| countries_rec.climate);
+    END LOOP;
+END;
 
 
 
