@@ -34,8 +34,8 @@ statement, rather than in the declaration section. Test your changes again.
 */
 
 BEGIN
-    FOR countries_rec
-    IN (SELECT country_name, national_holiday_name, national_holiday_date
+    FOR countries_rec IN
+        (SELECT country_name, national_holiday_name, national_holiday_date
         FROM countries
         WHERE region_id = 5)
     LOOP
@@ -84,6 +84,4 @@ BEGIN
     END LOOP;
     DBMS_OUTPUT.PUT_LINE(RPAD('Total', v_pad)|| ' | ' || v_count);
 END;
-
-
 
