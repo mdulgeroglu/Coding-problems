@@ -1,30 +1,30 @@
 /* 2. Modify the following PL/SQL block so that it uses a cursor FOR loop. Keep the explicit cursor declaration in the DECLARE section. Test your changes.
 DECLARE
-    CURSOR countries_cur IS
+    CURSOR cur_countries IS
     SELECT country_name, national_holiday_name, national_holiday_date
     FROM countries
     WHERE region_id = 5;
-    countries_rec countries_cur%ROWTYPE;
+    r_countries cur_countries%ROWTYPE;
 BEGIN
-    OPEN countries_cur;
+    OPEN cur_countries;
     LOOP
-    FETCH countries_cur INTO countries_rec;
-    EXIT WHEN countries_cur%NOTFOUND;
-    DBMS_OUTPUT.PUT_LINE ('Country: ' || countries_rec.country_name || ' National holiday: '|| countries_rec.national_holiday_name || ', held on: '|| countries_rec.national_holiday_date);
+    FETCH cur_countries INTO r_countries;
+    EXIT WHEN cur_countries%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE ('Country: ' || r_countries.country_name || ' National holiday: '|| r_countries.national_holiday_name || ', held on: '|| r_countries.national_holiday_date);
     END LOOP;
-    CLOSE countries_cur;
+    CLOSE cur_countries;
 END;
 
 */
 
 DECLARE
-    CURSOR countries_cur IS
+    CURSOR cur_countries IS
         SELECT country_name, national_holiday_name, national_holiday_date
         FROM countries
         WHERE region_id = 5;
 BEGIN
-    FOR countries_rec IN countries_cur LOOP
-        DBMS_OUTPUT.PUT_LINE ('Country: ' || countries_rec.country_name || ' National holiday: '|| countries_rec.national_holiday_name || ', held on: '|| countries_rec.national_holiday_date);
+    FOR r_countries IN cur_countries LOOP
+        DBMS_OUTPUT.PUT_LINE ('Country: ' || r_countries.country_name || ' National holiday: '|| r_countries.national_holiday_name || ', held on: '|| r_countries.national_holiday_date);
     END LOOP;
 END;
 
@@ -34,12 +34,12 @@ statement, rather than in the declaration section. Test your changes again.
 */
 
 BEGIN
-    FOR countries_rec IN
+    FOR r_countries IN
         (SELECT country_name, national_holiday_name, national_holiday_date
         FROM countries
         WHERE region_id = 5)
     LOOP
-    DBMS_OUTPUT.PUT_LINE ('Country: ' || countries_rec.country_name || ' National holiday: '|| countries_rec.national_holiday_name || ', held on: '|| countries_rec.national_holiday_date);
+    DBMS_OUTPUT.PUT_LINE ('Country: ' || r_countries.country_name || ' National holiday: '|| r_countries.national_holiday_name || ', held on: '|| r_countries.national_holiday_date);
     END LOOP;
 END;
 
@@ -51,9 +51,9 @@ cursor FOR loop, declaring the cursor using a subquery in the FOR…LOOP stateme
 */
 
 BEGIN
-    FOR countries_rec IN (
+    FOR r_countries IN (
         SELECT country_name, highest_elevation, climate FROM countries WHERE highest_elevation > 8000) LOOP
-        DBMS_OUTPUT.PUT_LINE ('Country: ' || RPAD(countries_rec.country_name, 28) || ' | ' || 'Highest Elevation: '|| RPAD(countries_rec.highest_elevation, 4) || ' | ' || 'Climate: '|| countries_rec.climate);
+        DBMS_OUTPUT.PUT_LINE ('Country: ' || RPAD(r_countries.country_name, 28) || ' | ' || 'Highest Elevation: '|| RPAD(r_countries.highest_elevation, 4) || ' | ' || 'Climate: '|| r_countries.climate);
     END LOOP;
 END;
 
@@ -70,7 +70,7 @@ having more than six languages. (Hint: Declare a variable to hold the value of %
 DECLARE
     v_count         PLS_INTEGER := 0;
     v_pad           PLS_INTEGER := 40;
-    CURSOR countries_cur IS
+    CURSOR cur_countries IS
         SELECT cte.country_name, COUNT(sle.language_id) AS COUNT
         FROM countries cte JOIN spoken_languages sle
         ON (cte.country_id = sle.country_id)
@@ -78,10 +78,11 @@ DECLARE
         HAVING COUNT(*) > 6;
 BEGIN
     DBMS_OUTPUT.PUT_LINE(RPAD('Country Name', v_pad)|| ' | ' || 'Number of Spoken Languages');
-    FOR countries_rec IN countries_cur LOOP
-        DBMS_OUTPUT.PUT_LINE (RPAD(countries_rec.country_name, v_pad) || ' | ' || countries_rec.COUNT);
-        v_count := countries_cur%ROWCOUNT;
+    FOR r_countries IN cur_countries LOOP
+        DBMS_OUTPUT.PUT_LINE (RPAD(r_countries.country_name, v_pad) || ' | ' || r_countries.COUNT);
+        v_count := cur_countries%ROWCOUNT;
     END LOOP;
     DBMS_OUTPUT.PUT_LINE(RPAD('Total', v_pad)|| ' | ' || v_count);
 END;
+
 
