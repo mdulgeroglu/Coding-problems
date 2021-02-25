@@ -1,5 +1,4 @@
 /* Department 10 typically has 50 employees. Write a PL/SQL program to count the number of current employees in the department and how many employees need to be hired to bring the count to 50. Your solution MUST:
-
 (1) Declare a variable to hold the count of current employees (v_num_empl), a variable to hold the number to be hired (v_num_hire), and a constant to store the value 50 (c_max_empl).
 (2) Retrieve the count of employees currently in department 10.
 (3) Compute the difference using c_max_empl and v_num_empl and store the result in v_num_hire.
