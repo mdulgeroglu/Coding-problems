@@ -28,29 +28,29 @@ DECLARE
     v_emp_dept_record        emp_dept;
     r_employees  cur_dept%ROWTYPE;
     v_dept PLS_INTEGER;
-    var PLS_INTEGER;
+    v_counter PLS_INTEGER := 0;
+    v_empcounter PLS_INTEGER := 0;
 
 BEGIN
-    OPEN cur_dept;
-    FETCH cur_dept INTO r_employees;
-    WHILE var <= 5 LOOP
+    FOR r_employees IN cur_dept LOOP
+    
         v_dept := r_employees.department_id;
 
-        SELECT dpt.department_name , COUNT(epe.employee_id) AS EMPCOUNT
+        SELECT dpt.department_name , COUNT(epe.employee_id) AS 'EMPCOUNT'
         INTO v_emp_dept_record
         FROM departments dpt JOIN employees epe
         ON (dpt.department_id = epe.department_id)
         WHERE dpt.department_id = v_dept
         GROUP BY dpt.department_name
-        ORDER BY empcount;
+        ORDER BY empcount DESC;
 
-        DBMS_OUTPUT.PUT_LINE(v_emp_dept_record.department_name);
-
-        var := var + 1;
+        DBMS_OUTPUT.PUT_LINE(v_emp_dept_record.department_name || r_employees.EMPCOUNT);
+        
+        v_counter := v_counter + 1;
+        EXIT WHEN v_counter >= 5;
 
     END LOOP;
 
-    CLOSE cur_dept;
 
 EXCEPTION
     WHEN NO_DATA_FOUND THEN
@@ -58,7 +58,6 @@ EXCEPTION
 END;
 
 
-dpt.department_name AS Department, COUNT(epe.employee_id) AS NumberOfEmployees
 
 
 
