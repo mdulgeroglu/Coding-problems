@@ -1,5 +1,3 @@
-@lab5_3.SQL
-
 /* 2. Write a PL/SQL block to display the country name and the area of each country in a chosen
 region. The region_id should be passed to the cursor as a parameter. Test your block using two
 region_ids: 5 (South America) and 30 (Eastern Asia). Do not use a cursor FOR loop.
