@@ -51,8 +51,10 @@ cursor FOR loop, declaring the cursor using a subquery in the FOR…LOOP stateme
 */
 
 BEGIN
-    FOR r_countries IN (
-        SELECT country_name, highest_elevation, climate FROM countries WHERE highest_elevation > 8000) LOOP
+    FOR r_countries IN (SELECT country_name, highest_elevation, climate 
+                        FROM countries 
+                        WHERE highest_elevation > 8000) 
+    LOOP
         DBMS_OUTPUT.PUT_LINE ('Country: ' || RPAD(r_countries.country_name, 28) || ' | ' || 'Highest Elevation: '|| RPAD(r_countries.highest_elevation, 4) || ' | ' || 'Climate: '|| r_countries.climate);
     END LOOP;
 END;
@@ -71,15 +73,15 @@ DECLARE
     v_count         PLS_INTEGER := 0;
     v_pad           PLS_INTEGER := 40;
     CURSOR cur_countries IS
-        SELECT cte.country_name, COUNT(sle.language_id) AS COUNT
+        SELECT cte.country_name, COUNT(sle.language_id) AS COUNTOF
         FROM countries cte JOIN spoken_languages sle
         ON (cte.country_id = sle.country_id)
         GROUP BY cte.country_name
-        HAVING COUNT(*) > 6;
+        HAVING COUNT(sle.language_id) > 6;
 BEGIN
     DBMS_OUTPUT.PUT_LINE(RPAD('Country Name', v_pad)|| ' | ' || 'Number of Spoken Languages');
     FOR r_countries IN cur_countries LOOP
-        DBMS_OUTPUT.PUT_LINE (RPAD(r_countries.country_name, v_pad) || ' | ' || r_countries.COUNT);
+        DBMS_OUTPUT.PUT_LINE (RPAD(r_countries.country_name, v_pad) || ' | ' || r_countries.COUNTOF);
         v_count := cur_countries%ROWCOUNT;
     END LOOP;
     DBMS_OUTPUT.PUT_LINE(RPAD('Total', v_pad)|| ' | ' || v_count);
