@@ -88,6 +88,7 @@ EXCEPTION
 END;
 
 C.Modify the block again to change the WHERE clause to region_id = 29. Re-run the block. Now what happens and why?
+The statment is successfully processed and the result is "Region: 29 is: Caribbean".
 DECLARE
     v_number NUMBER(6,2) := 100;
     v_region_id regions.region_id%TYPE;
@@ -105,17 +106,67 @@ END;
 
 
 
+/* 8.Enter and run the following PL/SQL code. What output is displayed, and why? Save your code.
+The result is:
+Lorentz
+King
+first the employees last name with id 100 is assigned to v_last_name. Then the inner block is run and the employees last name with id 107 is assigned into v_last_name and printed (this is within the scope of the inner block). Then the outer block v_last_name is printed. The two v_last_name variables have different scope.
+
+DECLARE
+    v_last_name employees.last_name%TYPE;
+BEGIN
+    SELECT last_name INTO v_last_name
+    FROM employees
+    WHERE employee_id = 100;
+    /* This employee’s last name is King */
+
+    DECLARE
+        v_last_name employees.last_name%TYPE;
+    BEGIN
+        SELECT last_name INTO v_last_name
+        FROM employees
+        WHERE employee_id = 107;
+        /* This employee’s last name is Lorentz */
+        DBMS_OUTPUT.PUT_LINE(v_last_name);
+    END;
+
+    DBMS_OUTPUT.PUT_LINE(v_last_name);
+END;
+*/
 
 
+/* 9.In your own words, list the benefits of subprograms.
+Subprograms allow you to break a program into smaller modules. They are similar to functions and can serve your needs when you are writing complex statements.
 
+10.In your own words, describe what a stored procedure is.
+A procedure is similar to a class where you can write code and save it to use in the future. It can also be useful if you have repetitive tasks. You can pass parameters to a procedure and it will return what you defined back to you.
+*/
 
+/* 11. The remaining questions in this practice use a copy of the employees table.
+A.Create the copy by executing the following SQL statement:
+CREATE TABLE employees_dup AS SELECT * from employees;
 
+B.Create the following procedure in Application Express:
+CREATE OR REPLACE PROCEDURE name_change IS
+BEGIN
+UPDATE employees_dup
+SET first_name = 'Susan'
+WHERE department_id = 60;
+END name_change;
 
+C.Save the definition of your procedure in case you need to modify it later. In the “Save SQL” popup, name your saved work “My name change procedure”.
 
+D.Execute the procedure by running the following anonymous block:
+BEGIN
+name_change;
+END;
+*/
 
-
-
-
+12.
+SELECT from the table to check that the procedure has executed correctly and performed the UPDATE:
+Create a second procedure named pay_raise which changes the salary of all employees in employees_dup to a new value of
+30000. Execute the procedure from anonymous block, then SELECT from the table to check that procedure has executed correctly.
+*/
 
 
 
