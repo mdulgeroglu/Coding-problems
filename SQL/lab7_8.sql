@@ -162,11 +162,128 @@ name_change;
 END;
 */
 
+
+
 12.
 SELECT from the table to check that the procedure has executed correctly and performed the UPDATE:
 Create a second procedure named pay_raise which changes the salary of all employees in employees_dup to a new value of
 30000. Execute the procedure from anonymous block, then SELECT from the table to check that procedure has executed correctly.
-*/
+CREATE OR REPLACE PROCEDURE pay_raise IS
+BEGIN
+UPDATE employees_dup
+SET salary = 30000;
+END pay_raise;
+------
+BEGIN
+pay_raise;
+END;
+------
+SELECT employee_id, salary
+FROM employees_dup;
+
+
+
+13. Retrieve your first name_change procedure by clicking on its name in the Saved SQL window. Modify the code to remove OR REPLACE from the CREATE statement and change the department_id to 50. Execute your code to recreate the procedure. What happens?
+The program returns an error “ORA-00955” because the procedure already exists. You need the OR REPLACE part to overwrite it.
+CREATE PROCEDURE name_change IS
+BEGIN
+UPDATE employees_dup
+SET first_name = 'Susan'
+WHERE department_id = 50;
+END name_change;
+
+
+
+14. This question uses the wf_countries table.
+A. Create a procedure that accepts a country_id as a parameter and displays the name of the country and its capitol city. Name your procedure get_country_info. Save your procedure definition for later use.
+
+B. Execute your procedure from an anonymous block, using country_id 90.
+
+C. Re-execute the procedure from the anonymous block, this time using country_id 95. What happens?
+
+D. Retrieve your procedure code from Saved SQL and modify it to trap the NO_DATA_FOUND exception in an exception handler. Re-execute the procedure using country_id 95 again. Now what happens?
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE get_country_info (
+    p_country_id    IN    countries.country_id%TYPE,
+    p_country_name  OUT   countries.country_name%TYPE,
+    P_capitol       OUT   countries.capitol%TYPE)
+IS
+
+BEGIN
+    SELECT country_name, capitol
+    INTO p_country_name, p_capitol
+    FROM countries
+    WHERE country_id = p_country_id;
+    DBMS_OUTPUT.PUT_LINE('Name of ID: ' || p_country_id || ' is ' || p_country_name || ' and the capitol is: ' || p_capitol);
+END;
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE get_country_info (
+    p_country_id IN countries.country_id%TYPE)
+IS
+
+DECLARE
+v_country_name countries.country_name%TYPE;
+v_capitol countries.capitol%TYPE;
+BEGIN
+    SELECT country_name, capitol
+    INTO v_country_name , v_capitol
+    FROM countries
+    WHERE country_id = p_country_id;
+
+    DBMS_OUTPUT.PUT_LINE('Name of ID: ' || p_country_id || ' is ' || v_country_name || ' and the capitol is: ' || v_capitol);
+END;
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE farm
+   (p_animal IN VARCHAR2,
+    p_sound IN VARCHAR)
+IS
+   v_double VARCHAR2(30) := p_sound || ' ' || p_sound;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Old McDonald had a farm e-i-e-i-o');
+    DBMS_OUTPUT.PUT_LINE('And on that farm he had a ' || p_animal || ', e-i-e-i-o');
+    DBMS_OUTPUT.PUT_LINE('With a ' || v_double || ' here and a ' || v_double || ' there');
+    DBMS_OUTPUT.PUT_LINE('Here a  ' || p_sound || ' there a ' || p_sound);
+    DBMS_OUTPUT.PUT_LINE('Everywhere a ' || v_double);
+    DBMS_OUTPUT.PUT_LINE('Old McDonald had a farm e-i-e-i-o');
+END farm;
+
+
+BEGIN
+  farm('cow', 'moo');
+  DBMS_OUTPUT.PUT_LINE(' ');
+  farm('horse', 'neigh');
+END;
+
+BEGIN
+  farm(p_sound => 'moo', p_animal => 'cow');  /* named notation  */
+  DBMS_OUTPUT.PUT_LINE(' ');
+  farm('horse', 'neigh');   /* positional notation  */
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
