@@ -9,7 +9,7 @@ public class Candle
     public String getColor() {
         return color;
     }
-/
+
 
     // set methods
 }

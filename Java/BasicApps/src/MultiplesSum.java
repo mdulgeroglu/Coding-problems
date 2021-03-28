@@ -1,4 +1,4 @@
-//Given a number n, write a method that sums all multiples of three and five up to n (inclusive). 
+//Given a number n, write a method that sums all multiples of three and five up to n (inclusive).
 
 public class MultiplesSum {
 
@@ -6,7 +6,7 @@ public class MultiplesSum {
         int number = 55;
         System.out.println(multSumCalc(number));
     }
-    
+
     static int multSumCalc(int n) {
         int sum = 0;
         for (int i=0; i<=n; i++) {
