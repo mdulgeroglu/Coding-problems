@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="RunManager" selected="Application.HeadsTails">
+  <component name="RunManager" selected="Application.RandomAccessTest">
     <configuration name="FileOut" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileOut" />
       <module name="BasicApps" />
@@ -50,6 +50,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RandomAccessTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RandomAccessTest" />
+      <module name="BasicApps" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReverseString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ReverseString" />
       <module name="BasicApps" />
@@ -57,20 +64,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwelveDays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TwelveDays" />
-      <module name="BasicApps" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RandomAccessTest" />
         <item itemvalue="Application.HeadsTails" />
         <item itemvalue="Application.ReverseString" />
         <item itemvalue="Application.FileOut" />
         <item itemvalue="Application.PathDemo" />
-        <item itemvalue="Application.TwelveDays" />
       </list>
     </recent_temporary>
   </component>
