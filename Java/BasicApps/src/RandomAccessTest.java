@@ -6,11 +6,13 @@ import static java.nio.file.StandardOpenOption.*;
 
 public class RandomAccessTest {
     public static void main(String[] args) {
+
         Path file = Paths.get("C:\\Java\\ch13\\Numbers.txt");
         String s = "XYZ";
         byte[] data = s.getBytes();
         ByteBuffer out = ByteBuffer.wrap(data);
         FileChannel fc = null;
+
         try {
             fc = (FileChannel)Files.newByteChannel(file, READ, WRITE);
             fc.position(0);
@@ -26,7 +28,7 @@ public class RandomAccessTest {
                 fc.write(out);
             fc.close();
 
-        } //end try @15
+        } //end try @16
         catch (Exception e) {
             System.out.println("Error: " + e);
         }

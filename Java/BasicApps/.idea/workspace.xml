@@ -28,9 +28,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="RunManager" selected="Application.RandomAccessTest">
-    <configuration name="FileOut" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FileOut" />
+  <component name="RunManager" selected="Application.CreateEmployeesRandomFile">
+    <configuration name="CreateEmployeesRandomFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CreateEmployeesRandomFile" />
+      <module name="BasicApps" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateEmptyEmployeesFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CreateEmptyEmployeesFile" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -38,13 +45,6 @@
     </configuration>
     <configuration name="HeadsTails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HeadsTails" />
-      <module name="BasicApps" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PathDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PathDemo" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,11 +66,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CreateEmployeesRandomFile" />
+        <item itemvalue="Application.CreateEmptyEmployeesFile" />
         <item itemvalue="Application.RandomAccessTest" />
         <item itemvalue="Application.HeadsTails" />
         <item itemvalue="Application.ReverseString" />
-        <item itemvalue="Application.FileOut" />
-        <item itemvalue="Application.PathDemo" />
       </list>
     </recent_temporary>
   </component>
