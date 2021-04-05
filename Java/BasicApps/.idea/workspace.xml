@@ -28,7 +28,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="RunManager" selected="Application.CreateEmployeesRandomFile">
+  <component name="RunManager" selected="Application.TryToParseDouble">
+    <configuration name="BadSubscriptCaught" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BadSubscriptCaught" />
+      <module name="BasicApps" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateEmployeesRandomFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CreateEmployeesRandomFile" />
       <module name="BasicApps" />
@@ -43,22 +50,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeadsTails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HeadsTails" />
+    <configuration name="DivisionTry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DivisionTry" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RandomAccessTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RandomAccessTest" />
-      <module name="BasicApps" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReverseString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ReverseString" />
+    <configuration name="TryToParseDouble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TryToParseDouble" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,11 +66,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TryToParseDouble" />
+        <item itemvalue="Application.BadSubscriptCaught" />
+        <item itemvalue="Application.DivisionTry" />
         <item itemvalue="Application.CreateEmployeesRandomFile" />
         <item itemvalue="Application.CreateEmptyEmployeesFile" />
-        <item itemvalue="Application.RandomAccessTest" />
-        <item itemvalue="Application.HeadsTails" />
-        <item itemvalue="Application.ReverseString" />
       </list>
     </recent_temporary>
   </component>
