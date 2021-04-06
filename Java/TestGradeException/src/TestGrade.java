@@ -14,7 +14,12 @@ public class TestGrade {
             System.out.println("Enter letter grade for student id number: " + ids[x]);
             inString = input.next();
             grades[x] = inString.charAt(0);
-            // Write your code here
+            try {
+                flag = 0;
+                for (int y=0; y<GradeException.VALID_GRADES.length; ++y) {
+                    if (grades[x] == GradeException)
+                }
+            }
         }
         for (int x = 0; x < ids.length; ++x)
             outString = outString + "ID #" + ids[x] + "  Grade " +

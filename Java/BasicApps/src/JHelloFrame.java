@@ -1,4 +1,4 @@
-// extending JFrame w
+// extending JFrame with ActionListener component
 // expected out: none/extends class
 
 import javax.swing.*;
@@ -16,7 +16,7 @@ public class JHelloFrame extends JFrame implements ActionListener {
     final int WD = 275;
     final int HT = 275;
 
-    public HelloFrame() {
+    public JHelloFrame() {
         super("Hello Frame");
         setSize(WD, HT);
         setLayout(new FlowLayout());
@@ -25,13 +25,14 @@ public class JHelloFrame extends JFrame implements ActionListener {
         add(lblQ);
         add(txtA);
         add(btnPress);
+        add(lblGreet);
 
         btnPress.addActionListener(this);
-    }
+    } // end constructor @19
     @Override
     public void actionPerformed(ActionEvent e) {
         String name = txtA.getText();
-        String greet = "Hello" + name;
+        String greet = "Hello " + name;
         lblGreet.setText(greet);
     }
 

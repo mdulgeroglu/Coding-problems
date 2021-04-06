@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="RunManager" selected="Application.ComponentDemo">
+  <component name="RunManager" selected="Application.JHelloDemo">
     <configuration name="ComponentDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ComponentDemo" />
       <module name="BasicApps" />
@@ -38,13 +38,6 @@
     </configuration>
     <configuration name="CreateTwoJMyFrameObjects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CreateTwoJMyFrameObjects" />
-      <module name="BasicApps" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JFrame4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JFrame4" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -64,13 +57,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JHelloDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JHelloDemo" />
+      <module name="BasicApps" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JHelloDemo" />
         <item itemvalue="Application.ComponentDemo" />
         <item itemvalue="Application.CreateTwoJMyFrameObjects" />
         <item itemvalue="Application.JFrame6" />
         <item itemvalue="Application.JFrame5" />
-        <item itemvalue="Application.JFrame4" />
       </list>
     </recent_temporary>
   </component>
