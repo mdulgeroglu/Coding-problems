@@ -17,8 +17,17 @@ public class TestGrade {
             try {
                 flag = 0;
                 for (int y=0; y<GradeException.VALID_GRADES.length; ++y) {
-                    if (grades[x] == GradeException)
+                    if (grades[x] == GradeException.VALID_GRADES[y])
+                        flag = 1;
                 }
+                if (flag == 0) {
+                    gradeString = "Invalid grade";
+                    throw(new GradeException(gradeString));
+                }
+            } //end try
+            catch (Exception e) {
+                System.out.println(e.getMessage());
+                    grades[x] = 'I';
             }
         }
         for (int x = 0; x < ids.length; ++x)
