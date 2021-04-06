@@ -28,14 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="RunManager" selected="Application.JDemoFrame">
-    <configuration name="BadSubscriptCaught" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BadSubscriptCaught" />
-      <module name="BasicApps" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.JFrame6">
     <configuration name="JDemoFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JDemoFrame" />
       <module name="BasicApps" />
@@ -43,22 +36,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JFrame1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JFrame1" />
+    <configuration name="JFrame3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JFrame3" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JFrame2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JFrame2" />
+    <configuration name="JFrame4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JFrame4" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TryToParseDouble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TryToParseDouble" />
+    <configuration name="JFrame5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JFrame5" />
+      <module name="BasicApps" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JFrame6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JFrame6" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,11 +66,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JFrame6" />
+        <item itemvalue="Application.JFrame5" />
+        <item itemvalue="Application.JFrame4" />
+        <item itemvalue="Application.JFrame3" />
         <item itemvalue="Application.JDemoFrame" />
-        <item itemvalue="Application.JFrame2" />
-        <item itemvalue="Application.JFrame1" />
-        <item itemvalue="Application.TryToParseDouble" />
-        <item itemvalue="Application.BadSubscriptCaught" />
       </list>
     </recent_temporary>
   </component>
