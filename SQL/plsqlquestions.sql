@@ -84,6 +84,9 @@ END;
 
 
 
+
+
+
 -- Display the name and type of all objects in your schema that are either functions or procedures. Display the result set in order of the object name. Note the aliases used for column names. Select the correct table from USER_OBJECTS, ALL_OBJECTS, DBA_OBJECTS.
 
 SELECT object_name AS "NAME", object_type AS "TYPE"

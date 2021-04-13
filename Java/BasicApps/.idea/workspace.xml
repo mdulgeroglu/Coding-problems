@@ -26,9 +26,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.JHelloDemo">
+  <component name="RunManager" selected="Application.CheckBoxDemo">
+    <configuration name="CheckBoxDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CheckBoxDemo" />
+      <module name="BasicApps" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ComponentDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ComponentDemo" />
       <module name="BasicApps" />
@@ -38,13 +45,6 @@
     </configuration>
     <configuration name="CreateTwoJMyFrameObjects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CreateTwoJMyFrameObjects" />
-      <module name="BasicApps" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JFrame5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JFrame5" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,11 +66,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CheckBoxDemo" />
         <item itemvalue="Application.JHelloDemo" />
         <item itemvalue="Application.ComponentDemo" />
         <item itemvalue="Application.CreateTwoJMyFrameObjects" />
         <item itemvalue="Application.JFrame6" />
-        <item itemvalue="Application.JFrame5" />
       </list>
     </recent_temporary>
   </component>
