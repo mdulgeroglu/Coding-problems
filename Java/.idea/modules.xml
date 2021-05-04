@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BasicApps/BasicApps.iml" filepath="$PROJECT_DIR$/BasicApps/BasicApps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Coding-problems.iml" filepath="$PROJECT_DIR$/Coding-problems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollegeCourseApp/CollegeCourseApp.iml" filepath="$PROJECT_DIR$/CollegeCourseApp/CollegeCourseApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoCandlesApp/DemoCandlesApp.iml" filepath="$PROJECT_DIR$/DemoCandlesApp/DemoCandlesApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoHorseApp/DemoHorseApp.iml" filepath="$PROJECT_DIR$/DemoHorseApp/DemoHorseApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeometricFigureApp/GeometricFigureApp.iml" filepath="$PROJECT_DIR$/GeometricFigureApp/GeometricFigureApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeometricFigureApp2/GeometricFigureApp2.iml" filepath="$PROJECT_DIR$/GeometricFigureApp2/GeometricFigureApp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaInheritance/JavaInheritance.iml" filepath="$PROJECT_DIR$/JavaInheritance/JavaInheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JournalistApp/JournalistApp.iml" filepath="$PROJECT_DIR$/JournalistApp/JournalistApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestGradeException/TestGradeException.iml" filepath="$PROJECT_DIR$/TestGradeException/TestGradeException.iml" />
+    </modules>
+  </component>
+</project>

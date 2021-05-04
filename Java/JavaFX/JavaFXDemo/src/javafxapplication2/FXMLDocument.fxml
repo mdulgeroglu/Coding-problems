@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLDocumentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="519.0" layoutX="-4.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="609.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#d2f2ff" />
+                  <Stop color="#ffd6e6" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6a77ff" height="89.0" layoutX="252.0" layoutY="124.0" stroke="#ff9999" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="89.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6a77ff" height="89.0" layoutX="143.0" layoutY="124.0" stroke="#ff9999" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="89.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6a77ff" height="89.0" layoutX="361.0" layoutY="124.0" stroke="#ff9999" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="89.0" />
+      <Button fx:id="btnClick" layoutX="224.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-radius: 18px; -fx-background-color: #6a77ff;" text="SPIN" textFill="WHITE">
+         <font>
+            <Font size="43.0" />
+         </font></Button>
+      <Label layoutX="152.0" layoutY="39.0" text="LUCKY SEVENS" textFill="#2d00c3">
+         <font>
+            <Font name="Stencil" size="43.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl1" layoutX="172.0" layoutY="126.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="64.0" />
+         </font></Label>
+      <Label fx:id="lbl2" layoutX="282.0" layoutY="126.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="64.0" />
+         </font></Label>
+      <Label fx:id="lbl3" layoutX="390.0" layoutY="126.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="64.0" />
+         </font></Label>
+      <Label fx:id="lblResult" alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="258.0" prefHeight="83.0" prefWidth="493.0" textAlignment="CENTER" textFill="#2d00c3">
+         <font>
+            <Font size="56.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
