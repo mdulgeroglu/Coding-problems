@@ -7,10 +7,8 @@ WHERE LOWER(CompanyName) LIKE 'bike world';
 -- Show the CompanyName for all customers with an address in City 'Dallas
 SELECT c.CustomerID, c.CompanyName, a.City
 FROM Customer AS c 
-JOIN CustomerAddress AS ca
-	ON (c.CustomerID = ca.CustomerID)
-JOIN Address AS a
-	ON (ca.AddressID = a.AddressID)
+	JOIN CustomerAddress AS ca ON c.CustomerID = ca.CustomerID
+	JOIN Address AS a ON ca.AddressID = a.AddressID
 Where UPPER(a.City) LIKE 'DALLAS'
 
 
@@ -18,7 +16,6 @@ Where UPPER(a.City) LIKE 'DALLAS'
 SELECT COUNT(so.SalesOrderDetailID) AS "Count"
 FROM SalesOrderDetail AS so, Product AS p
 WHERE so.ProductID = p.ProductID AND p.ListPrice > 1000;
-
 
 
 -- Give the CompanyName of those customers with orders over $100000. Include the subtotal plus tax plus freight
@@ -30,7 +27,10 @@ WHERE soh.CustomerID = c.CustomerID AND soh.TotalDue > 100000;
 -- Find the number of left racing socks ('Racing Socks, L') ordered by CompanyName 'Riding Cycles'
 SELECT c.CompanyName, SUM(sod.OrderQTY)
 FROM SalesLT.Customer c, SalesLT.SalesOrderHeader soh, SalesLT.SalesOrderDetail sod, SalesLT.Product p
-WHERE c.CustomerID = soh.CustomerID AND soh.SalesOrderID = sod.SalesOrderID AND sod.ProductID = p.ProductID
-	AND p.Name LIKE 'Racing Socks, L' AND LOWER(c.CompanyName) LIKE 'Riding Cycles'
+WHERE c.CustomerID = soh.CustomerID 
+	AND soh.SalesOrderID = sod.SalesOrderID 
+	AND sod.ProductID = p.ProductID
+	AND p.Name LIKE 'Racing Socks, L' 
+	AND LOWER(c.CompanyName) LIKE 'Riding Cycles'
 GROUP BY c.CompanyName;
 
