@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="RunManager" selected="Application.CheckBoxDemo">
+  <component name="RunManager" selected="Application.FileOut">
     <configuration name="CheckBoxDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CheckBoxDemo" />
       <module name="BasicApps" />
@@ -50,8 +50,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JFrame6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JFrame6" />
+    <configuration name="FileOut" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileOut" />
       <module name="BasicApps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,11 +66,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FileOut" />
         <item itemvalue="Application.CheckBoxDemo" />
         <item itemvalue="Application.JHelloDemo" />
         <item itemvalue="Application.ComponentDemo" />
         <item itemvalue="Application.CreateTwoJMyFrameObjects" />
-        <item itemvalue="Application.JFrame6" />
       </list>
     </recent_temporary>
   </component>

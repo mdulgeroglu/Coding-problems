@@ -9,7 +9,7 @@ public class AvgValue {
         System.out.println(avg(arrayList));
     }
 
-    static Double avg(List <Integer> list) {
+    static int avg(List <Integer> list) {
 
         // init vars
         double sum     = 0;
