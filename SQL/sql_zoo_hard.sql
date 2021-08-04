@@ -87,17 +87,3 @@ GROUP BY  pc.ParentProductCategoryID, a.City
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-

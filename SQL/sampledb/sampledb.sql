@@ -39,6 +39,7 @@ INSERT INTO reviews VALUES (29, 'MyLoUlSh', 3, 'This rating is based on the new 
 INSERT INTO reviews VALUES (30, 'Marky', 5, 'I''ve had Snapchat for over 2 years now. Snapchat is a fun, creative way', TO_DATE('4/8/2020 16:15', 'MM-DD-YYYY HH24:MI'), 'Snapchat is awesome but I need help!');
 
 
+-- ==============================================================================
 -- Table 2 for analytical function tests
 
 CREATE TABLE testtab2 (
@@ -46,18 +47,8 @@ CREATE TABLE testtab2 (
 	category	NUMBER(3) NOT NULL,
 	cat_name	VARCHAR2(25),
 	qty			NUMBER(10) NOT NULL,
-	max_stock   NUMBER(5) NOT NULL
-	CONSTRAINT 
+	max_stock   NUMBER(5) NOT NULL 
 );
-
-
-
-
-
-
-
-
-
 
 INSERT INTO testtab2 VALUES (1, 10, 'Sports & Outdoor', 1, 5);
 INSERT INTO testtab2 VALUES (2, 10, 'Sports & Outdoor', 3, 5);
@@ -311,6 +302,152 @@ UPDATE testtab2 SET max_stock = 50 WHERE id = 122;
 UPDATE testtab2 SET max_stock = 50 WHERE id = 123;
 UPDATE testtab2 SET max_stock = 5 WHERE id = 124;
 UPDATE testtab2 SET max_stock = 5 WHERE id = 125;
+
+
+
+-- ==============================================================================
+
+
+CREATE TABLE emp (
+	id 			NUMBER(3) PRIMARY KEY,
+	fname 		VARCHAR2(20),
+	lname 		VARCHAR2(20),
+	dept 		NUMBER(3),
+	salary 		NUMBER(10)
+);
+
+
+INSERT INTO emp VALUES (1 , 'Dyan', 'Fleck', 100, 52000);
+INSERT INTO emp VALUES (2 , 'Brady', 'Feuerstein', 150, 60000);
+INSERT INTO emp VALUES (3 , 'Babara', 'Becenti', 190, 45000);
+INSERT INTO emp VALUES (4 , 'Tiffany', 'Garver', 190, 42000);
+INSERT INTO emp VALUES (5 , 'Norman', 'Lesser', 190, 49000);
+INSERT INTO emp VALUES (6 , 'Alycia', 'Tighe', 150, 63000);
+INSERT INTO emp VALUES (7 , 'Huong', 'Carabello', 251, 70000);
+INSERT INTO emp VALUES (8 , 'Kendrick', 'Ashburn', 100, 50000);
+INSERT INTO emp VALUES (9 , 'Kamala', 'Blood', 100, 52000);
+INSERT INTO emp VALUES (10, 'Lannie', 'Stimpson', 55, 88000);
+INSERT INTO emp VALUES (11, 'Karisa', 'Alsup', 55, 90000);
+INSERT INTO emp VALUES (12, 'Kathern', 'Hallinan', 100, 50000);
+INSERT INTO emp VALUES (13, 'Newton', 'Mcnab', 100, 55000);
+INSERT INTO emp VALUES (14, 'Beatris', 'Leigh', 150, 60000);
+INSERT INTO emp VALUES (15, 'Elizabeth', 'Crum', 150, 65000);
+INSERT INTO emp VALUES (16, 'Tommye', 'Shippy', 150, 60000);
+INSERT INTO emp VALUES (17, 'Anita', 'Rowley', 251, 73000);
+INSERT INTO emp VALUES (18, 'Lolita', 'Dillingham', 150, 65000);
+INSERT INTO emp VALUES (19, 'Jerrell', 'Mor', 190, 47000);
+INSERT INTO emp VALUES (20, 'Kristian', 'Peppler', 100, 50000);
+INSERT INTO emp VALUES (21, 'Serena', 'Licea', 100, 70000);
+INSERT INTO emp VALUES (22, 'Penelope', 'Saavedra', 100, 55000);
+INSERT INTO emp VALUES (23, 'Sonia', 'Bamber', 100, 50000);
+INSERT INTO emp VALUES (24, 'Lenard', 'Waldon', 190, 45000);
+INSERT INTO emp VALUES (25, 'Valeria', 'Storm', 190, 47000);
+INSERT INTO emp VALUES (26, 'Tisa', 'Super', 190, 45000);
+INSERT INTO emp VALUES (27, 'Leoma', 'Vitolo', 300, 86000);
+INSERT INTO emp VALUES (28, 'Christen', 'Farnum', 300, 83000);
+INSERT INTO emp VALUES (29, 'Erinn', 'Grado', 300, 85000);
+INSERT INTO emp VALUES (30, 'Denisha', 'Kinney', 300, 85000);
+
+
+
+
+
+
+52000   100    Dyan Fleck
+60000   150    Brady Feuerstein
+45000   190    Babara Becenti
+42000   190    Tiffany Garver
+49000   190    Norman Lesser
+63000   150    Alycia Tighe
+70000   251    Huong Carabello
+50000   100    Kendrick Ashburn
+52000   100    Kamala Blood
+88000   55     Lannie Stimpson
+90000   55     Karisa Alsup
+50000   100    Kathern Hallinan
+55000   100    Newton Mcnab
+60000   150    Beatris Leigh
+65000   150    Elizabeth Crum
+60000   150    Tommye Shippy
+73000   251    Anita Rowley
+65000   150    Lolita Dillingham
+47000   190    Jerrell Mor
+50000   100    Kristian Peppler
+70000   100    Serena Licea
+55000   100    Penelope Saavedra
+50000   100    Sonia Bamber
+45000   190    Lenard Waldon
+47000   190    Valeria Storm
+45000   190    Tisa Super
+86000   300    Leoma Vitolo
+83000   300    Christen Farnum
+85000   300    Erinn Grado
+85000   300    Denisha Kinney
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
